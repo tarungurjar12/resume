@@ -1,39 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v2.1.3/css/unicons.css">
-    <link rel="stylesheet" href="./style/style.css" type="text/css"/>
-    <link rel="stylesheet" href="./style/main.css" type="text/css"/>
-    <link rel="icon" href="./images/icon.jpg"" sizes="32x32" />
+    <link rel="stylesheet" href="./style/style.css" type="text/css" />
+    <link rel="stylesheet" href="./style/main.css" type="text/css" />
+    <link rel="icon" href="./images/icon.jpg"" sizes=" 32x32" />
     <link rel="icon" href="./images/icon.jpg" sizes="192x192" />
     <link rel="apple-touch-icon-precomposed" href="./img/icon.jpg" />
     <meta name="msapplication-TileImage" content="./img/icon.jpg" />
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-
     <!-- jQuery library -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-
     <!-- Popper JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
 
     <!-- Latest compiled JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <link
-        rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
-    />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">   
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="js/anime.min.js"></script>
     <title>Portfolio | Tarun Kumar </title>
+    <style>
+        .section-active {
+            color: #e74c3c;
+        }
+        .header-education-section {
+            margin: 8% 0 0 0;
+        }
+        #header-education-section::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+        #educationContent{
+            align-content: center;
+        }
+
+        #technicalContent{
+            padding : 15% 0%;
+        }
+
+        #personalProjects, #extras{
+            padding : 15% 0%;
+        }
+        .foreground {
+            opacity: .8;
+            transition: opacity 1.5s ease-in-out;
+        }
+        .selected-foreground {
+            opacity: 1;
+        }
+
+        
+        .small-image {
+            width: 50%; /* half of the original size */
+            height: 50%; /* half of the original size */
+        }
+        
+        .user-info {
+            margin: 5% auto;
+            text-align: start;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            text-align: left;
+            justify-content: center;
+        }
+    </style>
 </head>
+
 <body>
-    
     <main class="container">
         <section class="profile">
-            <div class="left"> 
+            <div class="left">
                 <ul class="contact">
                     <li>
                         <i class="uil uil-phone-volume"></i>
@@ -67,6 +111,11 @@
                             <i class="uil uil-twitter"></i>
                         </a>
                     </li>
+                    <li>
+                        <a href="Resume.pdf">
+                            <button class="btn btn_light animate__animated"; onclick="window.print();">Print</button>
+                        </a>
+                    </li>
                 </ul>
             </div>
         </section>
@@ -78,94 +127,171 @@
                         <h3>Hello!</h3>
                         <h1>I<span style="color: #f87652;">'</span>m Tarun Kumar</h1>
                         <h2>Students To Achieve Their Dreams</h2>
-                        <p>I'm a front-end developer, Computer Science Student, and also continuously learning the latest technologies and programming skills. I'm a fast learner and also have understanding about algorithms. I have knowledge of many different Programming Languages.</p>
+                        <p>I'm a front-end developer, Computer Science Student, and also continuously learning the
+                            latest technologies and programming skills. I'm a fast learner and also have understanding
+                            about algorithms. I have knowledge of many different Programming Languages.</p>
                         <div class="btn_container">
                             <a href=""><button class="btn btn-light animate__animated">Hire Me</button></a>
                         </div>
                     </div>
                     <div class="col-lg-6 col-md-6 col-ms-12 col-xs-12 hero-profile">
-                        <center>    
-                            <img src="./images/profile.jpg" alt="">
+                        <center>
+                            <div class="col-lg-6 col-md-6 col-ms-12 col-xs-12">
+                                <img src="./images/profile.jpg" alt="" class="small-image">
+                            </div>
                         </center>
+                        <div class="user-info">
+                            <code>
+                                DOB &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: 21-02-2022 </br>
+                                Spoken Language : English Hindi</br>
+                                Nationality &nbsp;&nbsp;&nbsp;&nbsp;: Indian</br>
+                                Interest &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: Reading, Writing and programming
+                            </code>
+                          </div>
                     </div>
                 </div>
             </div>
         </div>
+        <!-- secction for Technical Education -->
+        <section class="header-education-section">
+            <nav class="nav justify-content-around">
+                <h3 class="nav-link section-active" onclick="showContent('educationContent')" class="section__heading">
+                    Education</h3>
+                <h3 class="nav-link" onclick="showContent('technicalContent')" class="section__heading">Technical
+                    skills</h3>
+                <h3 class="nav-link" onclick="showContent('personalProjects')" class="section__heading">Personal
+                    Projects</h3>
+                <h3 class="nav-link" onclick="showContent('extras')" class="section__heading">Extras</h3>
+            </nav>
+            <!-- The content area -->
+            <div id="content-education">
+                <!-- The content for menu item 1 -->
+                <div id="educationContent" class="foreground selected-foreground">
+                    <section class="skills">
+                        <section class="education_container">
+                            <div class="education_timeline">
+                                <div class="one"></div>
+                                <div class="two"></div>
+                                <div class="three"></div>
+                            </div>
+                            <div class="education-content-container">
+                                <div class="content-one">
+                                    <h1 class="content-header">Intermediate</h1>
+                                    <p>2017 - 2018</p>
+                                    <p>HighSchool</p>
+                                    <p>CBSE BOARD</p>
+                                </div>
+                                <div class="content-two">
+                                    <h1 class="content-header">Bachelor</h1>
+                                    <p>2018 - 2021</p>
+                                    <p>Bachelor of Computer Applications</p>
+                                    <p>CCS University</p>
+                                </div>
+                                <div class="content-three">
+                                    <h1 class="content-header">Masters</h1>
+                                    <p>2022 - Current</p>
+                                    <p>Master of Computer Applications</p>
+                                    <p>AKTU</p>
+                                </div>
+                            </div>
+                        </section>     
+                    </section>
+                </div>
+                <div class="technicalskills foreground" id="technicalContent" style="display:none;">
+                    <div class="right" id="parent_technical_skills">
+                        <div class="technicalskills">
+                            <div class="box">
+                                <img src="./images/html.png" alt="">
+                                <h5>HTML</h5>
+                            </div>
+                            <div class="box">
+                                <img src="./images/css.png" alt="">
+                                <h5>CSS</h5>
+                            </div>
+                            <div class="box">
+                                <img src="./images/javascript.png" alt="">
+                                <h5>Javascript</h5>
+                            </div>
 
-        <section class="skills">
-            <h1 class="section__heading">Education & Technical Skills</h1>
-            <div class="content">
-                <div class="left">
-                    <div class="inner__left">
-                        <div class="heading">
-                            <i class="uil uil-graduation-cap"></i>
-                            <h5>Education</h5>
+                            <div class="box">
+                                <img src="./images/react.png" alt="">
+                                <h5>React js</h5>
+                            </div>
+                            <div class="box">
+                                <img src="./images/bootstrap.png" alt="">
+                                <h5>Bootstrap</h5>
+                            </div>
+                            <div class="box">
+                                <img src="./images/figma.png" alt="">
+                                <h5>Figma</h5>
+                            </div>
+                            <div class="box">
+                                <img src="./images/c.png" alt="">
+                                <h5>C</h5>
+                            </div>
                         </div>
-                        <div class="timeline__wrapper">
-                            <div class="item">
-                                <p class="center">Intermediate</p>
-                                <p>ATOMIC ENERGY CENTRAL SCHOOL, NARORA</p>
-                                <p>CBSE Board</p>
-                                <p>2017 - 2018</p>
+                        <div class="technicalskills">
+                            <div class="box">
+                                <img src="./images/c.png" alt="">
+                                <h5>C++</h5>
                             </div>
-                            <div class="item">
-                                <p>Bachelor of Computer Applications</p>
-                                <p class="center">GAUTAM BUDDHA UNIVERSITY</p>
-                                <p>2019 - 2022</p>
+                            <div class="box">
+                                <img src="./images/adobe-premiere-pro.png" alt="">
+                                <h5>Premiere pro</h5>
                             </div>
-                            <div class="item">
-                                <p>Master of Computer Applications</p>
-                                <p class="center">KIET Group of Institutions (AKTU) </p>
-                                <p>2022 - Current</p>
-                            </div>
+
                         </div>
                     </div>
                 </div>
-
-                <div class="right">
-                    <div class="technicalskills">
-                        <div class="box">
-                            <img src="./images/html.png" alt="">
-                            <h5>HTML</h5>
-                        </div>
-                        <div class="box">
-                            <img src="./images/css.png" alt="">
-                            <h5>CSS</h5>
-                        </div>
-                        <div class="box">
-                            <img src="./images/javascript.png" alt="">
-                            <h5>Javascript</h5>
-                        </div>
-                        <div class="box">
-                            <img src="./images/react.png" alt="">
-                            <h5>React js</h5>
-                        </div>
-                        <div class="box">
-                            <img src="./images/bootstrap.png" alt="">
-                            <h5>Bootstrap</h5>
+                <!-- contentPersonal  -->
+                <div id="personalProjects" class="foreground" style="display:none;">
+                    <!--  alphaCrypt -->
+                    <div class="pp_timeline">
+                        <div class="one"></div>
+                        <div class="two"></div>
+                        <div class="three"></div>
+                    </div>
+                    <div id="alphaCrypt">
+                        <div id="detailsAlphaCrypt">
+                            <h3 class="text-white">alphaCrypt</h3>
+                            <p class="card-text bg-dark text-white">Lorem ipsum dolor sit amet consectetur adipisicing
+                                elit. Nobis in exercitationem totam,</p>
                         </div>
                     </div>
-                    <div class="technicalskills">
-                        <div class="box">
-                            <img src="./images/c.png" alt="">
-                            <h5>C++</h5>
+                    <!-- Phycrypt -->
+                    <div id="alphaPhycrypt">
+                        <div id="detailsPhycrypt">
+                            <h3 class="text-white">Phycrypt</h3>
+                            <p class="card-text bg-dark text-white">Lorem ipsum dolor sit amet consectetur adipisicing
+                                elit. Nobis in exercitationem totam,</p>
                         </div>
-                        <div class="box">
-                            <img src="./images/adobe-premiere-pro.png" alt="">
-                            <h5>Premiere pro</h5>
-                        </div>
-                        <div class="box">
-                            <img src="./images/figma.png" alt="">
-                            <h5>Figma</h5>
-                        </div>
-                        <div class="box">
-                            <img src="./images/c.png" alt="">
-                            <h5>C</h5>
-                        </div>  
                     </div>
+                    <!-- LFR -->
+                    <div id="LFR">
+                        <div id="detailsLFR">
+                            <h3>LFR</h3>
+                            <p class="card-text bg-dark text-white">Lorem ipsum dolor sit amet consectetur adipisicing
+                                elit. Nobis in exercitationem totam,</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- extras  -->
+                <div id="extras" class="foreground" style="display:none;">
+                    <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur porta quam mollis, tristique
+                        ligula vitae, scelerisque dolor. Aliquam nec purus at dolor vulputate vestibulum eu tempor
+                        magna. Ut ac risus purus. Sed metus ante, finibus nec porta sed, interdum in ex. In hac
+                        habitasse platea dictumst. Pellentesque maximus elementum orci, id iaculis arcu suscipit vel.
+                        Nullam gravida vehicula accumsan. Morbi posuere eros risus, a sollicitudin nulla ultricies at.
+                        Sed facilisis nisl nec mi egestas aliquet. Vivamus a facilisis nulla, viverra ultrices mauris.
+                        Phasellus laoreet justo consectetur velit malesuada ultricies. Maecenas eget suscipit diam. Sed
+                        quis est vel justo mattis iaculis et vitae arcu. Proin molestie ex at dictum semper. Ut ut
+                        cursus quam. Nulla auctor elementum placerat. Nullam non sagittis velit. Praesent diam est,
+                        auctor non iaculis vel, interdum et odio. Pellentesque tincidunt vehicula porttitor. Ut enim
+                        metus, porta sed sodales sed, cursus eget sapien.
                 </div>
             </div>
         </section>
+
         <section class="counter__section">
             <div>
                 <div>
@@ -197,21 +323,179 @@
                 </div>
             </div>
         </section>
-       
+
     </main>
 
 
     <div id="particles-js"></div>
     <script src="./js/particle.min.js"></script>
+    <!-- Add reference to Bootstrap JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.16.0/dist/umd/popper.min.js"
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
     <script>
         particlesJS.load('particles-js', 'particles.json',
-        function(){
-            console.log('particles.json loaded...')
-        })
-    </script>   
+            function () {
+                console.log('particles.json loaded...')
+            })
+    </script>
+    <!--  script for education and technical skills -->
+    <script>
+        // Function to show the content of the selected menu item
+        function showContent(menuId) {
+            // Get the elements with the IDs "educationContent" and "technicalContent"
+            var menu1Content = document.getElementById('educationContent');
+            var menu2Content = document.getElementById('technicalContent');
+            var menu3Content = document.getElementById('personalProjects');
+            var menu4Content = document.getElementById('extras');
+
+            // Get the menu items
+            var menu1Item = document.querySelector('[onclick="showContent(\'educationContent\')"]');
+            var menu2Item = document.querySelector('[onclick="showContent(\'technicalContent\')"]');
+            var menu3Item = document.querySelector('[onclick="showContent(\'personalProjects\')"]');
+            var menu4Item = document.querySelector('[onclick="showContent(\'extras\')"]');
+
+            // Show the content of the selected menu item and hide the other one
+            if (menuId == 'educationContent') {
+                menu1Content.style.display = 'block';
+                menu2Content.style.display = 'none';
+                menu3Content.style.display = 'none';
+                menu4Content.style.display = 'none';
+                // Add the "active" class to the selected menu item
+                menu1Item.classList.add('section-active');
+                menu1Item.classList.add('selected-foreground');
+                // Remove the "active" class from the other menu items
+                menu2Item.classList.remove('section-active');
+                menu2Item.classList.remove('selected-foreground');
+                menu3Item.classList.remove('section-active');
+                menu3Item.classList.remove('selected-foreground');
+                menu4Item.classList.remove('section-active');
+                menu4Item.classList.remove('selected-foreground');
+            } else if (menuId == 'technicalContent') {
+                menu1Content.style.display = 'none';
+                menu2Content.style.display = 'block';
+                menu3Content.style.display = 'none';
+                menu4Content.style.display = 'none';
+                // Add the "active" class to the selected menu item
+                menu2Item.classList.add('section-active');
+                menu2Item.classList.add('selected-foreground');
+                // Remove the "active" class from the other menu items
+                menu1Item.classList.remove('section-active');
+                menu1Item.classList.remove('selected-foreground');
+                menu3Item.classList.remove('section-active');
+                menu3Item.classList.remove('selected-foreground');
+                menu4Item.classList.remove('section-active');
+                menu4Item.classList.remove('selected-foreground');
+            } else if (menuId == 'personalProjects') {
+                menu1Content.style.display = 'none';
+                menu2Content.style.display = 'none';
+                menu3Content.style.display = 'block';
+                menu4Content.style.display = 'none';
+                // Add the "active" class to the selected menu item
+                menu3Item.classList.add('section-active');
+                menu3Item.classList.add('selected-foreground');
+                // Remove the "active" class from the other menu items
+                menu1Item.classList.remove('section-active');
+                menu1Item.classList.remove('selected-foreground');
+                menu2Item.classList.remove('section-active');
+                menu2Item.classList.remove('selected-foreground');
+                menu4Item.classList.remove('section-active');
+                menu4Item.classList.remove('selected-foreground');
+            } else {
+                menu1Content.style.display = 'none';
+                menu2Content.style.display = 'none';
+                menu3Content.style.display = 'none';
+                menu4Content.style.display = 'block';
+
+                menu4Item.classList.add('section-active');
+                menu4Item.classList.add('selected-foreground');
+                // Remove the "active" class from the other menu items
+                menu1Item.classList.remove('section-active');
+                menu1Item.classList.remove('selected-foreground');
+                menu2Item.classList.remove('section-active');
+                menu2Item.classList.remove('selected-foreground');
+                menu3Item.classList.remove('section-active');
+                menu3Item.classList.remove('selected-foreground');
+            }
+        }
+    </script>
+
+    <script type="text/javascript">
+
+        let h3Elements = document.querySelectorAll('h3.card-header');
+
+        h3Elements.forEach(h3 => {
+            h3.addEventListener('click', function () {
+                let contentDiv = this.nextElementSibling;
+                if (contentDiv.classList.contains('collapse')) {
+                    anime({
+                        targets: contentDiv,
+                        height: 'auto',
+                        duration: 500,
+                        easing: 'easeInOutQuad',
+                        complete: function () {
+                            contentDiv.classList.remove('collapse');
+                            contentDiv.classList.add('show');
+                        }
+                    });
+                } else {
+                    anime({
+                        targets: contentDiv,
+                        height: 0,
+                        duration: 500,
+                        easing: 'easeInOutQuad',
+                        complete: function () {
+                            contentDiv.classList.remove('show');
+                            contentDiv.classList.add('collapse');
+                        }
+                    });
+                }
+            });
+        });
+
+
+
+        let h1Elements = document.querySelectorAll('h1.personal_item');
+
+        h1Elements.forEach(h1 => {
+            h1.addEventListener('click', function () {
+                h1Elements.forEach(otherH1 => {
+                    otherH1.classList.remove('section-active');
+                });
+                this.classList.add('section-active');
+            });
+        });
+        // JavaScript
+        const items = document.querySelectorAll('.personal_item');
+        const contents = document.querySelectorAll('.personal_content');
+
+        items.forEach(item => {
+            item.addEventListener('click', () => {
+                const target = item.dataset.target;
+                const content = document.querySelector(target);
+
+                items.forEach(i => i.classList.remove('personalactive'));
+                contents.forEach(c => c.classList.remove('personalactive'));
+
+                item.classList.add('personalactive');
+                content.classList.add('personalactive');
+
+                anime({
+                    targets: content,
+                    opacity: [0, 1],
+                    duration: 500,
+                    easing: 'easeOutQuad'
+                });
+            });
+        });
+
+    </script>
     <script type="text/javascript" src="./js/app.js"></script>
     <script type="text/javascript" src="./js/particles.js"></script>
 
 </body>
+
 </html>
-                                                          
