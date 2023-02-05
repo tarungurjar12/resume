@@ -369,11 +369,20 @@ section.skills .skills__wrapper .skill-box .progress__wrap .progress__bar .toolt
     text-transform: uppercase;
 }
 
+
 section.counter__section {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    display: flex;
+    flex-wrap: wrap;
     background: #000000;
-}
+  }
+  
+  section.counter__section > div {
+    flex: 0 0 33.33%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
 
 section.counter__section > div {
     display: flex;
