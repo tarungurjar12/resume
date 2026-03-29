@@ -4,12 +4,12 @@
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <title>Tarun Kumar — UI/UX & Graphic Designer</title>
+<meta name="description" content="Portfolio of Tarun Kumar — a Delhi-based UI/UX & Graphic Designer crafting digital experiences that matter."/>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-<link href="https://fonts.googleapis.com/css2?family=Clash+Display:wght@400;500;600;700&family=Switzer:wght@300;400;500;600&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet"/>
-<!-- Fallback if Clash Display unavailable -->
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet"/>
-<link rel="stylesheet" href="style.css"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet"/>
+<link href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700,900&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="assets/css/style.css"/>
 </head>
 <body>
 
@@ -149,17 +149,7 @@
   <div class="about-layout">
     <div class="about-left rv">
       <div class="about-photo">
-        <div class="about-photo-inner">
-          <div class="about-photo-icon">🎨</div>
-          <div class="about-photo-txt">Upload your photo<br/>to personalise</div>
-        </div>
-      </div>
-      <div class="about-card">
-        <div class="about-card-icon">📍</div>
-        <div class="about-card-text">
-          <strong>Delhi, India</strong>
-          <span>Available for Remote & On-site</span>
-        </div>
+        <img src="assets/images/profile.jpg" alt="Tarun Kumar — UI/UX & Graphic Designer" loading="lazy"/>
       </div>
     </div>
 
@@ -171,14 +161,12 @@
         <p>I'm <strong>Tarun Kumar</strong>, a UI/UX & Graphic Designer based in Delhi with a knack for creating interfaces that feel natural and visuals that leave an impression. From <strong>pixel-perfect Figma prototypes</strong> to print-ready hoardings — I do it all.</p>
         <p>Currently at <strong>Makoons (KRS Educreations)</strong>, I design website UI, educational books, franchise marketing materials, and digital content. My MCA background bridges design thinking with technical precision — making every handoff seamless.</p>
       </div>
+
+      <!-- Stats — 3 columns in a single row -->
       <div class="about-stats rv d2">
         <div class="about-stat">
           <div class="about-stat-n">1<span>–2</span></div>
           <div class="about-stat-l">Years Experience</div>
-        </div>
-        <div class="about-stat">
-          <div class="about-stat-n">20<span>+</span></div>
-          <div class="about-stat-l">Projects Delivered</div>
         </div>
         <div class="about-stat">
           <div class="about-stat-n">10<span>+</span></div>
@@ -187,6 +175,15 @@
         <div class="about-stat">
           <div class="about-stat-n">3</div>
           <div class="about-stat-l">Companies Worked</div>
+        </div>
+      </div>
+
+      <!-- Location card below the stats table -->
+      <div class="about-location rv d3">
+        <div class="about-location-icon">📍</div>
+        <div class="about-location-text">
+          <strong>Delhi, India</strong>
+          <span>Available for Remote & On-site</span>
         </div>
       </div>
     </div>
@@ -397,7 +394,9 @@
     <div class="proj-card featured rv">
       <div class="proj-visual">
         <div class="proj-vis-bg"><div class="proj-vis-text">ILB-MART</div></div>
-        <div class="proj-vis-icon">🛒</div>
+        <div class="proj-vis-icon">
+          <img src="assets/images/ilb-mart-logo.png" alt="ILB Mart Logo"/>
+        </div>
         <div class="proj-badge">2025</div>
       </div>
       <div class="proj-body">
@@ -428,7 +427,7 @@
       </div>
     </div>
 
-    <div class="proj-card rv d1">
+    <a href="https://tarungurjar12.github.io/splendidgallery/" target="_blank" class="proj-card rv d1">
       <div class="proj-visual">
         <div class="proj-vis-bg"><div class="proj-vis-text">Gallery</div></div>
         <div class="proj-vis-icon">📷</div>
@@ -443,7 +442,7 @@
           <div class="proj-link">↗</div>
         </div>
       </div>
-    </div>
+    </a>
   </div>
 </section>
 
@@ -550,6 +549,6 @@
   </div>
 </footer>
 
-<script src="script.js"></script>
+<script src="assets/js/script.js"></script>
 </body>
 </html>
