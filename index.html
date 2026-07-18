@@ -15,14 +15,20 @@
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
 <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500;600;700&family=DM+Mono:wght@300;400;500&display=swap" rel="stylesheet"/>
-<!-- Google Material Symbols -->
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet"/>
+<!-- General Sans - Premium Hero Font -->
+<link href="https://api.fontshare.com/v2/css?f[]=general-sans@400,500,600,700&display=swap" rel="stylesheet"/>
 <!-- AOS Animation Library -->
 <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet"/>
 <!-- Main CSS -->
 <link rel="stylesheet" href="assets/css/style.css"/>
 </head>
 <body>
+
+<!-- Scroll Progress -->
+<div id="scroll-progress"></div>
+<!-- Custom Cursor -->
+<div id="cursor-dot"></div>
+<div id="cursor-ring"></div>
 
 <!-- Loader -->
 <div id="loader">
@@ -63,7 +69,7 @@
   <div class="hero-marquee-bg">DESIGNER&nbsp;&nbsp;·&nbsp;&nbsp;CREATOR&nbsp;&nbsp;·&nbsp;&nbsp;DESIGNER&nbsp;&nbsp;·&nbsp;&nbsp;CREATOR&nbsp;&nbsp;·&nbsp;&nbsp;DESIGNER&nbsp;&nbsp;·&nbsp;&nbsp;CREATOR&nbsp;&nbsp;·&nbsp;&nbsp;</div>
   <div class="hero-top" data-aos="fade-down" data-aos-delay="1800">
     <div class="hero-tag">UI/UX · Graphic · Product Designer</div>
-    <div class="hero-year">© 2025</div>
+    <div class="hero-year">© 2026</div>
   </div>
   <div class="hero-main">
     <h1 class="hero-h1">
@@ -89,10 +95,7 @@
           <a href="https://behance.net/tarungurjar12" target="_blank" class="soc" title="Behance">
             <svg viewBox="0 0 24 24" fill="#1769FF"><path d="M6.938 4.503c.702 0 1.34.06 1.92.188.577.13 1.07.33 1.485.61.41.28.733.65.96 1.12.225.47.34 1.05.34 1.73 0 .74-.17 1.36-.507 1.86-.338.5-.837.9-1.502 1.22.906.26 1.576.72 2.022 1.37.448.66.665 1.45.665 2.36 0 .75-.13 1.39-.41 1.93-.28.55-.67 1-1.16 1.35-.48.345-1.03.59-1.65.75-.61.16-1.25.24-1.91.24H0V4.51h6.938v-.007zM16.94 16.665c.44.428 1.073.643 1.894.643.59 0 1.1-.148 1.533-.447.43-.3.7-.61.79-.94h2.57c-.41 1.28-1.04 2.19-1.89 2.75-.85.56-1.884.84-3.09.84-.84 0-1.6-.13-2.28-.4-.68-.27-1.26-.65-1.73-1.14-.48-.49-.845-1.07-1.1-1.75-.256-.68-.384-1.42-.384-2.23 0-.78.13-1.51.4-2.19.27-.68.65-1.26 1.14-1.75.49-.49 1.07-.87 1.76-1.14.69-.26 1.44-.4 2.26-.4.92 0 1.72.18 2.41.54.69.36 1.26.84 1.71 1.45.45.61.77 1.3.97 2.08.2.78.27 1.6.21 2.45h-7.66c0 .85.22 1.49.66 1.92h.007zM3.24 10.51h3.2c.79 0 1.42-.19 1.88-.57.46-.38.69-.95.69-1.7 0-.77-.24-1.34-.72-1.7-.48-.36-1.1-.54-1.86-.54H3.24v4.51zM20.96 12.79c-.14-.73-.43-1.3-.86-1.7-.43-.4-1.01-.6-1.73-.6-.5 0-.92.09-1.27.27-.35.18-.64.41-.87.69-.23.28-.4.59-.5.93-.1.34-.17.69-.18 1.04h5.7c-.01-.22-.09-.44-.26-.63zM3.24 15.08h3.73c.88 0 1.57-.21 2.07-.62.5-.41.74-1.03.74-1.87 0-.91-.27-1.56-.8-1.97-.53-.41-1.25-.62-2.16-.62H3.24v5.08zM15.412 6.257h4.449v1.269h-4.449z"/></svg>
           </a>
-          <!-- Dribbble - Brand Color -->
-          <a href="https://dribbble.com/tarungurjar12" target="_blank" class="soc" title="Dribbble">
-            <svg viewBox="0 0 24 24" fill="#EA4C89"><path d="M12 24C5.385 24 0 18.615 0 12S5.385 0 12 0s12 5.385 12 12-5.385 12-12 12zm10.12-10.358c-.35-.11-3.17-.953-6.384-.438 1.34 3.684 1.887 6.684 1.992 7.308 2.3-1.555 3.936-4.02 4.395-6.87zm-6.115 7.808c-.153-.9-.75-4.032-2.19-7.77l-.066.02c-5.79 2.015-7.86 6.017-8.04 6.4 1.73 1.358 3.92 2.166 6.29 2.166 1.42 0 2.77-.29 4-.814zm-11.62-2.014c.23-.394 3.05-5.055 8.332-6.765.135-.045.27-.084.405-.12-.26-.585-.54-1.167-.832-1.74C7.17 11.775 2.206 11.71 1.756 11.7l-.004.312c0 2.633.998 5.037 2.634 6.838zm-2.42-8.955c.46.008 4.683.026 9.477-1.248-1.698-3.018-3.53-5.558-3.8-5.928-2.868 1.35-5.01 3.99-5.676 7.176zM9.6 2.052c.282.38 2.145 2.914 3.822 6 3.645-1.365 5.19-3.44 5.373-3.702-1.81-1.61-4.19-2.586-6.795-2.586-.477 0-.945.04-1.4.112zm13.44 9.21c-.236.897-1.26 4.455-4.395 6.87.26.45.455.91.573 1.39 2.295-1.555 3.93-4.02 4.39-6.87l-.567-1.39z"/></svg>
-          </a>
+
           <!-- GitHub - White on dark -->
           <a href="https://github.com/tarungurjar12" target="_blank" class="soc" title="GitHub">
             <svg viewBox="0 0 24 24" fill="#ffffff"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
@@ -193,42 +196,36 @@
   <div class="skills-scroll">
     <div class="sk-card" data-aos="fade-up">
       <div class="sk-num">01</div>
-      <div class="sk-icon"><span class="material-symbols-outlined">design_services</span></div>
       <div class="sk-title">UI/UX Design</div>
       <div class="sk-desc">Full product design lifecycle: wireframes, user flows, interaction design, high-fidelity prototypes, and responsive design for web and mobile.</div>
       <div class="sk-pills"><span>Figma</span><span>Framer</span><span>Wireframing</span><span>Prototyping</span><span>User Flows</span></div>
     </div>
     <div class="sk-card" data-aos="fade-up" data-aos-delay="100">
       <div class="sk-num">02</div>
-      <div class="sk-icon"><span class="material-symbols-outlined">palette</span></div>
       <div class="sk-title">Graphic Design</div>
       <div class="sk-desc">Brand identities, flyers, posters, banners, hoardings, book design, social media creatives for print and digital.</div>
       <div class="sk-pills"><span>Illustrator</span><span>Photoshop</span><span>InDesign</span><span>CorelDraw</span><span>Canva</span></div>
     </div>
     <div class="sk-card" data-aos="fade-up" data-aos-delay="200">
       <div class="sk-num">03</div>
-      <div class="sk-icon"><span class="material-symbols-outlined">widgets</span></div>
       <div class="sk-title">Product Design</div>
       <div class="sk-desc">User research, information architecture, design systems, component libraries, usability testing, and visual hierarchy.</div>
       <div class="sk-pills"><span>Design Systems</span><span>User Research</span><span>Usability</span><span>Typography</span></div>
     </div>
     <div class="sk-card" data-aos="fade-up" data-aos-delay="300">
       <div class="sk-num">04</div>
-      <div class="sk-icon"><span class="material-symbols-outlined">campaign</span></div>
       <div class="sk-title">Digital Marketing</div>
       <div class="sk-desc">Social media creatives, LinkedIn posts, Instagram and Facebook graphics, and complete campaign visual suites.</div>
       <div class="sk-pills"><span>Social Media</span><span>LinkedIn</span><span>Campaigns</span></div>
     </div>
     <div class="sk-card" data-aos="fade-up" data-aos-delay="400">
       <div class="sk-num">05</div>
-      <div class="sk-icon"><span class="material-symbols-outlined">code</span></div>
       <div class="sk-title">Front-End Handoff</div>
       <div class="sk-desc">Pixel-perfect implementation knowledge in HTML5, CSS3, Tailwind CSS and React.js for seamless design-to-code delivery.</div>
       <div class="sk-pills"><span>HTML5</span><span>CSS3</span><span>React.js</span><span>Tailwind</span></div>
     </div>
     <div class="sk-card" data-aos="fade-up" data-aos-delay="500">
       <div class="sk-num">06</div>
-      <div class="sk-icon"><span class="material-symbols-outlined">movie_edit</span></div>
       <div class="sk-title">Video &amp; Motion</div>
       <div class="sk-desc">Video editing and motion graphics for brand storytelling, social content, reels, and promotional campaigns.</div>
       <div class="sk-pills"><span>Premiere Pro</span><span>Motion Graphics</span></div>
@@ -239,63 +236,128 @@
 <!-- ════════════ TOOLS ════════════ -->
 <section id="tools" class="section-light">
   <div class="s-label" data-aos="fade-up">My Arsenal</div>
-  <h2 class="s-title" data-aos="fade-up" data-aos-delay="100">Tools &amp; <em>Software</em></h2>
-  <p class="s-sub" data-aos="fade-up" data-aos-delay="200">The design stack I work with every day.</p>
+  <h2 class="s-title" data-aos="fade-up" data-aos-delay="100">
+    Tools & <em>Software</em>
+  </h2>
+  <p class="s-sub" data-aos="fade-up" data-aos-delay="200">
+    The design stack I work with every day.
+  </p>
 
   <div class="tools-bento">
-    <div class="tools-group-label" data-aos="fade-up">Design &amp; Prototyping</div>
-    <div class="t-card t-c1" data-aos="fade-up">
-      <div class="t-icon"><img src="https://cdn.simpleicons.org/figma" alt="Figma"/></div>
-      <div class="t-name">Figma</div><div class="t-cat">UI / Prototype</div>
-    </div>
-    <div class="t-card t-c1" data-aos="fade-up" data-aos-delay="50">
-      <div class="t-icon"><img src="https://cdn.simpleicons.org/framer/0055FF" alt="Framer"/></div>
-      <div class="t-name">Framer</div><div class="t-cat">Web Design</div>
-    </div>
-    <div class="t-card t-c1" data-aos="fade-up" data-aos-delay="100">
-      <div class="t-icon"><img src="https://cdn.simpleicons.org/canva/00C4CC" alt="Canva"/></div>
-      <div class="t-name">Canva</div><div class="t-cat">Graphics</div>
-    </div>
-    <div class="t-card t-c1" data-aos="fade-up" data-aos-delay="150">
-      <div class="t-icon"><img src="https://cdn.simpleicons.org/affinitydesigner/4E3188" alt="Affinity"/></div>
-      <div class="t-name">Affinity</div><div class="t-cat">Vector / Photo</div>
+
+    <!-- Design -->
+    <div class="tools-group-label" data-aos="fade-up">
+      Design & Prototyping
     </div>
 
-    <div class="tools-group-label" data-aos="fade-up">Adobe Creative Suite</div>
     <div class="t-card t-c1" data-aos="fade-up">
-      <div class="t-icon"><img src="https://cdn.simpleicons.org/adobeillustrator/FF9A00" alt="Illustrator"/></div>
-      <div class="t-name">Illustrator</div><div class="t-cat">Vector</div>
-    </div>
-    <div class="t-card t-c1" data-aos="fade-up" data-aos-delay="50">
-      <div class="t-icon"><img src="https://cdn.simpleicons.org/adobephotoshop/31A8FF" alt="Photoshop"/></div>
-      <div class="t-name">Photoshop</div><div class="t-cat">Photo / Brand</div>
-    </div>
-    <div class="t-card t-c1" data-aos="fade-up" data-aos-delay="100">
-      <div class="t-icon"><img src="https://cdn.simpleicons.org/adobeindesign/FF3366" alt="InDesign"/></div>
-      <div class="t-name">InDesign</div><div class="t-cat">Print / Books</div>
-    </div>
-    <div class="t-card t-c1" data-aos="fade-up" data-aos-delay="150">
-      <div class="t-icon"><img src="https://cdn.simpleicons.org/adobepremierepro/9999FF" alt="Premiere Pro"/></div>
-      <div class="t-name">Premiere Pro</div><div class="t-cat">Video</div>
+      <div class="t-icon">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" alt="Figma">
+      </div>
+      <div class="t-name">Figma</div>
+      <div class="t-cat">UI / Prototype</div>
     </div>
 
-    <div class="tools-group-label" data-aos="fade-up">Development &amp; Other</div>
-    <div class="t-card t-c1" data-aos="fade-up">
-      <div class="t-icon"><img src="https://cdn.simpleicons.org/coreldraw/71B642" alt="CorelDraw"/></div>
-      <div class="t-name">CorelDraw</div><div class="t-cat">Vector / Print</div>
-    </div>
     <div class="t-card t-c1" data-aos="fade-up" data-aos-delay="50">
-      <div class="t-icon"><img src="https://cdn.simpleicons.org/react/61DAFB" alt="React"/></div>
-      <div class="t-name">React.js</div><div class="t-cat">Handoff</div>
+      <div class="t-icon">
+        <img src="https://cdn.simpleicons.org/framer" alt="Framer">
+      </div>
+      <div class="t-name">Framer</div>
+      <div class="t-cat">Web Design</div>
     </div>
+
     <div class="t-card t-c1" data-aos="fade-up" data-aos-delay="100">
-      <div class="t-icon"><img src="https://cdn.simpleicons.org/tailwindcss/06B6D4" alt="Tailwind CSS"/></div>
-      <div class="t-name">Tailwind CSS</div><div class="t-cat">Styling</div>
+      <div class="t-icon">
+        <img src="https://cdn.simpleicons.org/canva" alt="Canva">
+      </div>
+      <div class="t-name">Canva</div>
+      <div class="t-cat">Graphics</div>
     </div>
+
     <div class="t-card t-c1" data-aos="fade-up" data-aos-delay="150">
-      <div class="t-icon"><img src="https://cdn.simpleicons.org/powerbi/F2C811" alt="Power BI"/></div>
-      <div class="t-name">Power BI</div><div class="t-cat">Analytics</div>
+      <div class="t-icon">
+        <img src="https://cdn.simpleicons.org/affinitydesigner" alt="Affinity Designer">
+      </div>
+      <div class="t-name">Affinity Designer</div>
+      <div class="t-cat">Vector / Photo</div>
     </div>
+
+
+    <!-- Adobe -->
+    <div class="tools-group-label" data-aos="fade-up">
+      Adobe Creative Suite
+    </div>
+
+    <div class="t-card t-c1" data-aos="fade-up">
+      <div class="t-icon">
+        <img src="https://cdn.simpleicons.org/adobeillustrator" alt="Illustrator">
+      </div>
+      <div class="t-name">Illustrator</div>
+      <div class="t-cat">Vector</div>
+    </div>
+
+    <div class="t-card t-c1" data-aos="fade-up" data-aos-delay="50">
+      <div class="t-icon">
+        <img src="https://cdn.simpleicons.org/adobephotoshop" alt="Photoshop">
+      </div>
+      <div class="t-name">Photoshop</div>
+      <div class="t-cat">Photo / Brand</div>
+    </div>
+
+    <div class="t-card t-c1" data-aos="fade-up" data-aos-delay="100">
+      <div class="t-icon">
+        <img src="https://cdn.simpleicons.org/adobeindesign" alt="InDesign">
+      </div>
+      <div class="t-name">InDesign</div>
+      <div class="t-cat">Print / Books</div>
+    </div>
+
+    <div class="t-card t-c1" data-aos="fade-up" data-aos-delay="150">
+      <div class="t-icon">
+        <img src="https://cdn.simpleicons.org/adobepremierepro" alt="Premiere Pro">
+      </div>
+      <div class="t-name">Premiere Pro</div>
+      <div class="t-cat">Video</div>
+    </div>
+
+
+    <!-- Development -->
+    <div class="tools-group-label" data-aos="fade-up">
+      Development & Other
+    </div>
+
+    <div class="t-card t-c1" data-aos="fade-up">
+      <div class="t-icon">
+        <img src="https://cdn.simpleicons.org/coreldraw" alt="CorelDRAW">
+      </div>
+      <div class="t-name">CorelDRAW</div>
+      <div class="t-cat">Vector / Print</div>
+    </div>
+
+    <div class="t-card t-c1" data-aos="fade-up" data-aos-delay="50">
+      <div class="t-icon">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React">
+      </div>
+      <div class="t-name">React.js</div>
+      <div class="t-cat">Handoff</div>
+    </div>
+
+    <div class="t-card t-c1" data-aos="fade-up" data-aos-delay="100">
+      <div class="t-icon">
+        <img src="https://cdn.simpleicons.org/tailwindcss" alt="Tailwind CSS">
+      </div>
+      <div class="t-name">Tailwind CSS</div>
+      <div class="t-cat">Styling</div>
+    </div>
+
+    <div class="t-card t-c1" data-aos="fade-up" data-aos-delay="150">
+      <div class="t-icon">
+        <img src="https://cdn.simpleicons.org/powerbi" alt="Power BI">
+      </div>
+      <div class="t-name">Power BI</div>
+      <div class="t-cat">Analytics</div>
+    </div>
+
   </div>
 </section>
 
@@ -488,22 +550,18 @@
           <div class="c-soc-info"><div class="c-soc-name">LinkedIn</div><div class="c-soc-handle">linkedin.com/in/tarungurjar12</div></div>
           <div class="c-soc-arrow">→</div>
         </a>
-        <a href="https://behance.net/tarungurjar2" target="_blank" class="c-soc">
+        <a href="https://behance.net/tarungurjar12" target="_blank" class="c-soc">
           <div class="c-soc-icon"><svg viewBox="0 0 24 24" fill="#1769FF"><path d="M6.938 4.503c.702 0 1.34.06 1.92.188.577.13 1.07.33 1.485.61.41.28.733.65.96 1.12.225.47.34 1.05.34 1.73 0 .74-.17 1.36-.507 1.86-.338.5-.837.9-1.502 1.22.906.26 1.576.72 2.022 1.37.448.66.665 1.45.665 2.36 0 .75-.13 1.39-.41 1.93-.28.55-.67 1-1.16 1.35-.48.345-1.03.59-1.65.75-.61.16-1.25.24-1.91.24H0V4.51h6.938v-.007zM16.94 16.665c.44.428 1.073.643 1.894.643.59 0 1.1-.148 1.533-.447.43-.3.7-.61.79-.94h2.57c-.41 1.28-1.04 2.19-1.89 2.75-.85.56-1.884.84-3.09.84-.84 0-1.6-.13-2.28-.4-.68-.27-1.26-.65-1.73-1.14-.48-.49-.845-1.07-1.1-1.75-.256-.68-.384-1.42-.384-2.23 0-.78.13-1.51.4-2.19.27-.68.65-1.26 1.14-1.75.49-.49 1.07-.87 1.76-1.14.69-.26 1.44-.4 2.26-.4.92 0 1.72.18 2.41.54.69.36 1.26.84 1.71 1.45.45.61.77 1.3.97 2.08.2.78.27 1.6.21 2.45h-7.66c0 .85.22 1.49.66 1.92h.007zM3.24 10.51h3.2c.79 0 1.42-.19 1.88-.57.46-.38.69-.95.69-1.7 0-.77-.24-1.34-.72-1.7-.48-.36-1.1-.54-1.86-.54H3.24v4.51zM20.96 12.79c-.14-.73-.43-1.3-.86-1.7-.43-.4-1.01-.6-1.73-.6-.5 0-.92.09-1.27.27-.35.18-.64.41-.87.69-.23.28-.4.59-.5.93-.1.34-.17.69-.18 1.04h5.7c-.01-.22-.09-.44-.26-.63zM3.24 15.08h3.73c.88 0 1.57-.21 2.07-.62.5-.41.74-1.03.74-1.87 0-.91-.27-1.56-.8-1.97-.53-.41-1.25-.62-2.16-.62H3.24v5.08z"/></svg></div>
           <div class="c-soc-info"><div class="c-soc-name">Behance</div><div class="c-soc-handle">behance.net/tarungurjar2</div></div>
           <div class="c-soc-arrow">→</div>
         </a>
-        <a href="https://dribbble.com/tarungurjar12" target="_blank" class="c-soc">
-          <div class="c-soc-icon"><svg viewBox="0 0 24 24" fill="#EA4C89"><path d="M12 24C5.385 24 0 18.615 0 12S5.385 0 12 0s12 5.385 12 12-5.385 12-12 12zm10.12-10.358c-.35-.11-3.17-.953-6.384-.438 1.34 3.684 1.887 6.684 1.992 7.308 2.3-1.555 3.936-4.02 4.395-6.87zm-6.115 7.808c-.153-.9-.75-4.032-2.19-7.77l-.066.02c-5.79 2.015-7.86 6.017-8.04 6.4 1.73 1.358 3.92 2.166 6.29 2.166 1.42 0 2.77-.29 4-.814zm-11.62-2.014c.23-.394 3.05-5.055 8.332-6.765.135-.045.27-.084.405-.12-.26-.585-.54-1.167-.832-1.74C7.17 11.775 2.206 11.71 1.756 11.7l-.004.312c0 2.633.998 5.037 2.634 6.838zm-2.42-8.955c.46.008 4.683.026 9.477-1.248-1.698-3.018-3.53-5.558-3.8-5.928-2.868 1.35-5.01 3.99-5.676 7.176zM9.6 2.052c.282.38 2.145 2.914 3.822 6 3.645-1.365 5.19-3.44 5.373-3.702-1.81-1.61-4.19-2.586-6.795-2.586-.477 0-.945.04-1.4.112zm13.44 9.21c-.236.897-1.26 4.455-4.395 6.87.26.45.455.91.573 1.39 2.295-1.555 3.93-4.02 4.39-6.87l-.567-1.39z"/></svg></div>
-          <div class="c-soc-info"><div class="c-soc-name">Dribbble</div><div class="c-soc-handle">dribbble.com/tarungurjar12</div></div>
-          <div class="c-soc-arrow">→</div>
-        </a>
+
         <a href="https://github.com/tarungurjar12" target="_blank" class="c-soc">
           <div class="c-soc-icon"><svg viewBox="0 0 24 24" fill="#ffffff"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg></div>
           <div class="c-soc-info"><div class="c-soc-name">GitHub</div><div class="c-soc-handle">github.com/tarungurjar12</div></div>
           <div class="c-soc-arrow">→</div>
         </a>
-        <a href="https://instagram.com/tarungurjar12" target="_blank" class="c-soc">
+        <a href="https://instagram.com/tarun.gurjar12" target="_blank" class="c-soc">
           <div class="c-soc-icon"><svg viewBox="0 0 24 24" fill="#E4405F"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg></div>
           <div class="c-soc-info"><div class="c-soc-name">Instagram</div><div class="c-soc-handle">@tarungurjar12</div></div>
           <div class="c-soc-arrow">→</div>
@@ -520,7 +578,7 @@
 
 <!-- Footer -->
 <footer>
-  <div class="footer-l">© 2025 <span>Tarun Kumar</span> · All rights reserved</div>
+  <div class="footer-l">© 2026 <span>Tarun Kumar</span> · All rights reserved</div>
   <div class="footer-r" onclick="window.scrollTo({top:0,behavior:'smooth'})">Back to top ↑</div>
 </footer>
 
